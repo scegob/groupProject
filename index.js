@@ -31,7 +31,7 @@ const gamesData = {
     platform: "Nintendo Switch",
     rating: "5",
   },
-  COCOON: {
+  Concoon: {
     developerName: "Geometric Interactive",
     name: "Cocoon",
     platform:
