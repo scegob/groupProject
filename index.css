@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #107c10; /* Xbox green */
+    height: 12.25em;
+    
+}
+
+.logo {
+    height: 3.125em;
+    width: 3.125em;
+}
+
+.center {
+    border-radius: 32px;
+    display: block;
+    margin: 0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: top;
+    padding: 8px;
+}
+
+td {
+    color: blue;
+}
+
+.pN { 
+    font-style: italic;
+}
