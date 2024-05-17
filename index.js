@@ -120,11 +120,11 @@ window.onload = createVideoElements;
 
 // Array of games - Billeh
 const games = [
-  "The Legends of Zelda: Tears Of The kingdom",
+  "The Legends of Zelda: Tears Of The Kingdom",
   "Baldur's Gate 3",
   "Alan Wake 2",
   "Super Mario Bros. Wonder",
-  "Pikmin 4",
+  "Pikmin 4"
 ];
 
 // Function to create form dynamically - Bill
@@ -132,24 +132,24 @@ function createForm() {
   const form = document.getElementById("game-form");
 
   games.forEach((game, index) => {
-    // Create a label element
-    const label = document.createElement("label");
-    label.textContent = game;
+      // Create a label element
+      const label = document.createElement("label");
+      label.textContent = game;
 
-    // Create a radio input element
-    const radio = document.createElement("input");
-    radio.type = "radio";
-    radio.name = "game";
-    radio.value = game;
-    if (index === 0) {
-      radio.checked = true; // Check the first radio button by default
-    }
+      // Create a radio input element
+      const radio = document.createElement("input");
+      radio.type = "radio";
+      radio.name = "game";
+      radio.value = game;
+      if (index === 0) {
+          radio.checked = true; // Check the first radio button by default
+      }
 
-    // Append radio to label
-    label.prepend(radio);
+      // Append radio to label
+      label.prepend(radio);
 
-    // Append label to form
-    form.appendChild(label);
+      // Append label to form
+      form.appendChild(label);
   });
 }
 
@@ -160,5 +160,5 @@ function submitForm() {
   alert(`Your favorite game is: ${selectedGame}`);
 }
 
-// Create the form when the page loads
-window.onload = createForm;
+// Create the form immediately
+createForm();
