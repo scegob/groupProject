@@ -73,7 +73,7 @@ document.getElementById("loadDataBtn").addEventListener("click", function () {
     const row = document.createElement("tr");
     row.innerHTML = `
         <td>${game.name}</td>
-        <td>${game.publisherName}</td>
+        <td>${game.developerName}</td>
         <td>${game.platform}</td>
         <td>${game.rating}</td>
       `;
