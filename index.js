@@ -1,11 +1,12 @@
 // data for the array url https://www.polygon.com/23648669/best-video-games-2023 -Bill
 
+// An array of the the game data
 const gamesData = {
   The_Legend_Of_Zelda: {
     developerName: "Nintendo EPD",
     name: "The Legends of Zelda: Tears of the kingdom",
     platform: "Nintendo Switch",
-    rating: "1",
+    rating: "1", // not a number but a string
   },
   Baldurs_Gate_3: {
     developerName: "Larian Studio",
@@ -15,7 +16,7 @@ const gamesData = {
   },
   Alan_Wake_2: {
     developerName: "Remedy Entertainment",
-    name: "ALAN WAKE 2",
+    name: "Alan Wake 2",
     platform: "PlayStation 5, Windows PC, and Xbox Series X",
     rating: "3",
   },
@@ -80,3 +81,48 @@ document.getElementById("loadDataBtn").addEventListener("click", function () {
     tableBody.appendChild(row);
   });
 });
+
+// Array of games
+const games = [
+  "The Legends of Zelda: Tears Of The kingdom",
+  "Baldur's Gate 3",
+  "Alan Wake 2",
+  "Super Mario Bros. Wonder",
+  "Pikmin 4",
+];
+
+// Function to create form dynamically
+function createForm() {
+  const form = document.getElementById("game-form");
+
+  games.forEach((game, index) => {
+    // Create a label element
+    const label = document.createElement("label");
+    label.textContent = game;
+
+    // Create a radio input element
+    const radio = document.createElement("input");
+    radio.type = "radio";
+    radio.name = "game";
+    radio.value = game;
+    if (index === 0) {
+      radio.checked = true; // Check the first radio button by default
+    }
+
+    // Append radio to label
+    label.prepend(radio);
+
+    // Append label to form
+    form.appendChild(label);
+  });
+}
+
+// Function to handle form submission
+function submitForm() {
+  const form = document.getElementById("game-form");
+  const selectedGame = form.elements["game"].value;
+  alert(`Your favorite game is: ${selectedGame}`);
+}
+
+// Create the form when the page loads
+window.onload = createForm;
