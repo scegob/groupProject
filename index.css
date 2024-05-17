@@ -1,3 +1,4 @@
+/* addition fron Bill*/
 .navbar {
     background-color: #107c10; /* Xbox green */
     height: 12.25em;
@@ -65,4 +66,32 @@ input[type="radio"] {
 }
 .submit-btn:hover {
     background-color: #0056b3;
+}
+
+/*Additons from Rylee*/
+body{
+    background-color: black;
+    color: white;
+  }
+
+.center {
+  text-align: center;
+}
+
+#table-caption{
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
+.black-text {
+    color: black;
+}
+
+.white-text {
+    color: white;
+}
+
+.green-background {
+    background-color: green;
 }

@@ -1,6 +1,6 @@
 // data for the array url https://www.polygon.com/23648669/best-video-games-2023 -Bill
 
-// An array of the the game data
+// An array of the the game data - Bill
 const gamesData = {
   The_Legend_Of_Zelda: {
     developerName: "Nintendo EPD",
@@ -73,16 +73,52 @@ document.getElementById("loadDataBtn").addEventListener("click", function () {
   Object.values(gamesData).forEach(function (game) {
     const row = document.createElement("tr");
     row.innerHTML = `
-        <td>${game.name}</td>
-        <td>${game.developerName}</td>
-        <td>${game.platform}</td>
-        <td>${game.rating}</td>
+        <td class="white-text">${game.name}</td>
+        <td class="white-text">${game.developerName}</td>
+        <td class="white-text">${game.platform}</td>
+        <td class="white-text">${game.rating}</td>
       `;
     tableBody.appendChild(row);
   });
 });
 
-// Array of games
+// Array of YouTube video URLs - Bill
+const videos = [
+  "https://www.youtube.com/embed/uHGShqcAHlQ?si=TT15A6zRFGfQWIZQ",
+  "https://www.youtube.com/embed/1T22wNvoNiU?si=FYaOZlxqu_Rql__P",
+  "https://www.youtube.com/embed/438Kjx7m6Uc?si=ucjM_twb2W6QH_2p",
+  "https://www.youtube.com/embed/JStAYvbeSHc?si=G55mxz6_grXgcj6Q",
+  "https://www.youtube.com/embed/GwOUuC8Y5N0?si=3nm5QPPVQxvPbUmi",
+];
+
+// Function to create and append video iframes
+function createVideoElements() {
+  const container = document.getElementById("videos-container");
+
+  videos.forEach((videoUrl) => {
+    // Create a div container for each video
+    const videoContainer = document.createElement("div");
+    videoContainer.className = "video-container";
+
+    // Create an iframe element for the video
+    const iframe = document.createElement("iframe");
+    iframe.src = videoUrl;
+    iframe.allow =
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+
+    // Append the iframe to the video container
+    videoContainer.appendChild(iframe);
+
+    // Append the video container to the main container
+    container.appendChild(videoContainer);
+  });
+}
+
+// Create video elements when the page loads
+window.onload = createVideoElements;
+
+// Array of games - Billeh
 const games = [
   "The Legends of Zelda: Tears Of The kingdom",
   "Baldur's Gate 3",
@@ -91,7 +127,7 @@ const games = [
   "Pikmin 4",
 ];
 
-// Function to create form dynamically
+// Function to create form dynamically - Bill
 function createForm() {
   const form = document.getElementById("game-form");
 
@@ -117,7 +153,7 @@ function createForm() {
   });
 }
 
-// Function to handle form submission
+// Function to handle form submission - Rylee
 function submitForm() {
   const form = document.getElementById("game-form");
   const selectedGame = form.elements["game"].value;
