@@ -4,7 +4,7 @@ const gamesData = {
   The_Legend_Of_Zelda: {
     developerName: "Nintendo EPD",
     name: "The Legends of Zelda: Tears of the kingdom",
-    platforms: "Nintendo Switch",
+    platform: "Nintendo Switch",
     rating: "1",
   },
   Baldurs_Gate_3: {
